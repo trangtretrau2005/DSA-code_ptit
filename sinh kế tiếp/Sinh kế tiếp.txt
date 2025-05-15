@@ -1,0 +1,56 @@
+Sinh kế tiếp
+<Khoi tạo cấu hình ầu tiên>
+while(<khi chưa phải cấu hình cuối cùng>)
+->In ra cấu hình hiện tại
+và Sinh ra cấu hình tiếp theo
+
+--- Sinh xâu nhị phân có độ dài n
+Khởi tạo mảng có độ dài n với các bit 0
+Xâu tiếp theo -> Duyệt từ bit cuối cùng lên
+Nếu + a[i]=0 ->a[i]=1 và giữ nguyên các bit còn lại
+else a[i]=0 và chuyển tiếp các bit còn lại khi gặp a[i]=0 thì dung
+Check nếu i =0 thì đã là xâu cuối cùng còn không thì duyệt tiếp.
+
+
+--Hoán vị kế tiếp, sinh hoan vi
+<In ra xâu nhỏ nhất lớn hơn xâu cho trước>
+kiểm tra từ cuối lên:
+nếu gặp phần tử a[i]<a[i+1] thì hoán vị a[i] với phần tử nhỏ nhất tính từ cuối lên lớn hơn a[i]
+và sắp xếp day sau a[i] thành day tang dần bang cách đảo ngược
+1 3 9 8 7 5 4 2
+1 4 9 8 7 5 3 2
+1 4 2 3 5 7 8 9
+<hoan vị ngược> thi chi can thay dấu ngược lại
+
+---Sinh tổ hợp
+Duyệt từ cuối lên nếu a[i]=n-k+i thì i-- nếu không thì a[i]++;
+các giá trị sau a[i] thì duyệt j=i+1 đến k thì a[j]=a[j-1]+1, j++;
+
+<! trường hợp khác tính số thứ tự tổ hợp duyệt từ tổ hợp  Ban đầu đánh số là 1
+Thì tính tổng số tổ hợp được tạo ra – số thứ tự tính từ số đang xét đến tổ hợp cuối
+Cách tính số tổ hợp
+Int so_to_hop(int n, int k){
+If(k==0||k==n) return 1;
+If(k==1) return n;
+Return C(n-1,k)+C(n-1,k-1);
+>>>>
+
+--Tổ hợp tiếp theo
+Cung là sinh tổ hợp chap k nhưng khi sinh xong tổ hợp tiếp theo thì sẽ đếm số luogư các giá trị mới bang công thức a[i+1]-a[i]-1
+---Phát lộc <Bài này làm theo cách backtracking>
+Khoi tao ham in ra day(không có  dieu kien gi)
+khoi tao ham bool check =>Nếu thoả mãn 2 số 8 liên tiếp hay 3 số 6 liên tiếp thì sẽ return false (2 vòng lặp duyệt từ đầu den cuối)
+Khoi tao ham quay lui => Nếu i là chỉ so cuối cùng (i==n-1) thì kiểm tra xem check có true không gọi hàm in rồi return;
+		+Nếu chưa phải chỉ số cuối thì a[i]=6; Try(i+1); a[i]=8; Try(i+1) Thử các số sau xem bang 8,6 thoả mãn không
+Trong hàm main dinh sẵn a[0]=8, a[n-1]=6;
+----Hoán vị day số <sử dung quay lui>
+tao mang used de danh so indx da duoc chon, perm de danh dau hoan vi da in ra
+Su dung ham Try: Neu i la so cuoi cung thi in ra va return
+	Nếu chưa phải thì sẽ duyệt từ đầu tới cuối mảng: Nếu !used[j] thì perm[i]=a[j], Try(i+1), used[i]=false;
+----liệt kê tổ hợp <backtracking>
+tao mang used de danh so indx da duoc chon, perm de danh dau hoan vi da in ra
+####Hàm sort và xoá phần tử trùng lặp: 	sort(a,a+n);
+	int n2= unique(a,a+n)-a;
+Viết hàm in ra perm[i]
+viết hàm Try: Neu i la so cuoi cung thi in ra va return
+	Nếu chưa phải thì sẽ tương tự nhưng thay used[i] bang used[a[i]]

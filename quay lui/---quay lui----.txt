@@ -1,0 +1,12 @@
+---quay lui----
+##dat_ten_1####
+Su dung mảng 1 chiều để sắp xếp và sử dung unique de bo cac chu lap lai
+ham Try có 2 bien (index và biến bắt đầu) de dam bao 2 chữ khong trùng nhau
+hàm perm là hàm lưu kết quả
+###Day_so_1####
+Sử dung mảng 1 chiều và ghi de gia tri sum vao mang, lan luot giam n di 1 don vi
+##Day_so_2###
+su dung vecto 2 chieu
+dau tien sẽ day các gia tri trong mang vào 1 vecto 1 chieu
+Sau khi day xong sẽ đẩy vecto mảng 1 chieu này vào vecto 2 chieu
+sau do khi de len gia tri mang các gia tri tong lan luot và lap lai từ n về 1
