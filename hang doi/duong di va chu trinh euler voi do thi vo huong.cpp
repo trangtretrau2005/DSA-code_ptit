@@ -49,6 +49,8 @@ int main(){
 		if(ok==0) cout<<ok<<endl;
 		else if(ok!=0&&cnt==0) cout<<2<<endl;
 		else if (ok!=0&&cnt==2) cout<<1<<endl;
+		else cout << 0 << endl;
+
 		
 	}
 }
